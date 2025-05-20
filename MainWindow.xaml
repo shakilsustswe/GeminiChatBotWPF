@@ -8,10 +8,14 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="ChatBox" Grid.Row="0" Margin="0 0 0 10" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+        <!-- Chat display -->
+        <ListBox x:Name="ChatListBox" Grid.Row="0" Margin="0 0 0 10" />
+
+        <!-- Input and buttons -->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBox x:Name="InputBox" Width="600" Margin="0 0 10 0" />
-            <Button Content="Send" Width="100" Click="SendButton_Click" />
+            <TextBox x:Name="UserInputBox" Width="500" Margin="0 0 10 0"/>
+            <Button x:Name="SendButton" Content="Send" Width="100" Click="SendButton_Click"/>
+            <Button x:Name="UploadImageButton" Content="Upload Image" Width="120" Click="UploadImage_Click"/>
         </StackPanel>
     </Grid>
 </Window>
